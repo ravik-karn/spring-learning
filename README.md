@@ -1,4 +1,4 @@
-#Spring Framework learning
+# Spring Framework learning
 
 ## Importing
 mvn install
@@ -30,7 +30,12 @@ mvn package
 * Steps for creating Bean
     * Create class with constructor or getter and setter
     * Create XML bean tag ```<bean id="triangle" class="spring.Triangle"> </bean>```
-    * Create object of BeanFactory ```BeanFactory factory = new XmlBeanFactory(new FileSystemResource("spring.xml"));``` 
+    * Create object of BeanFactory ```BeanFactory factory = new XmlBeanFactory(new FileSystemResource("spring.xml"));```
+    or Create object of ApplicationContext ```ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");``` 
     * Call ```getBean``` with bean ID to create bean.
+
+```diff    
+- While using ApplicationContext bean XML file should be in the class path
+```
     
      
