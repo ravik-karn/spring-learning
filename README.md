@@ -40,6 +40,8 @@ mvn package
     * Passing reference of another object as bean param ```<constructor-arg ref="pointA"/>```
     * Allowed collections as bean type - list, set, map
     * Alias of a bean ```<alias name="pointA" alias="zero-point"/>```
+* AutoWire - byName, byType, constructor, 
+* Bean scope - singleton(default), prototype, request, session, global
     
 ```diff    
 - While using ApplicationContext bean XML file should be in the class path
