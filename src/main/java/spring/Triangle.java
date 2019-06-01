@@ -1,4 +1,4 @@
-package com.ravi.spring;
+package spring;
 
 public class Triangle {
     public Triangle() {
