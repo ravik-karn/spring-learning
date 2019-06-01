@@ -20,7 +20,7 @@ mvn package
 * Bean Factory uses Factory design pattern
 * Two ways to create Bean
     * Using XML Bean Factory
-        * Lazily initialized 
+        * Lazily initialized
     * Using Application context
         * Initialized during app instantiation
         * Very useful when we need singleton objects
@@ -29,7 +29,7 @@ mvn package
     * Dependency flow should be in opposite direction of control flow
 * Steps for creating Bean
     * Create class with constructor ```<constructor-arg value="Equilateral"/>``` 
-    or setter ```<property name="type" value="RIGHT ANGLE"></property>``` 
+    or setter ```<property name="type" value="RIGHT ANGLE"></property>```
     * Create XML bean tag ```<bean id="triangle" class="spring.Triangle"> </bean>```
     * Create object of BeanFactory ```BeanFactory factory = new XmlBeanFactory(new FileSystemResource("spring.xml"));```
     or Create object of ApplicationContext ```ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");``` 
@@ -40,9 +40,11 @@ mvn package
     * Passing reference of another object as bean param ```<constructor-arg ref="pointA"/>```
     * Allowed collections as bean type - list, set, map
     * Alias of a bean ```<alias name="pointA" alias="zero-point"/>```
-* AutoWire - byName, byType, constructor, 
+* AutoWire - byName, byType, constructor
 * Bean scope - singleton(default), prototype, request, session, global
+* Inheriting bean ```<bean id="triangle" class="spring.Triangle" parent="parent-triangle">```
     
 ```diff    
 - While using ApplicationContext bean XML file should be in the class path
+- While using settee for adding property to a bean we must define a default constructor
 ```
