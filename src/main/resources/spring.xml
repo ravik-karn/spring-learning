@@ -5,9 +5,13 @@
 <beans>
     <bean id="triangle" class="spring.Triangle">
         <property name="type" value="Equilateral"/>
-        <property name="pointA" ref="pointA"/>
-        <property name="pointB" ref="pointB"/>
-        <property name="pointC" ref="pointC"/>
+        <property name="points" >
+            <list>
+                <ref bean="zero-point"/>
+                <ref bean="pointB"/>
+                <ref bean="pointC"/>
+            </list>
+        </property>
     </bean>
     <bean id="pointA" class="spring.Point">
         <constructor-arg index="0" value="0"/>
@@ -21,4 +25,5 @@
         <constructor-arg index="0" value="2"/>
         <constructor-arg index="1" value="2"/>
     </bean>
+    <alias name="pointA" alias="zero-point"/>
 </beans>

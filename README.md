@@ -38,6 +38,8 @@ mvn package
     * Type can be explicitly defined also using ```<constructor-arg type="int" value="10"/>```
     * Order of bean parameters an be explicitly defined also using ```<constructor-arg index="0" value="Equilateral"/>```
     * Passing reference of another object as bean param ```<constructor-arg ref="pointA"/>```
+    * Allowed collections as bean type - list, set, map
+    * Alias of a bean ```<alias name="pointA" alias="zero-point"/>```
     
 ```diff    
 - While using ApplicationContext bean XML file should be in the class path
