@@ -28,7 +28,8 @@ mvn package
     * Based on inversion of control principle(SOLID)
     * Dependency flow should be in opposite direction of control flow
 * Steps for creating Bean
-    * Create class with constructor or getter and setter
+    * Create class with constructor ```<constructor-arg value="Equilateral"/>``` 
+    or setter ```<property name="type" value="RIGHT ANGLE"></property>``` 
     * Create XML bean tag ```<bean id="triangle" class="spring.Triangle"> </bean>```
     * Create object of BeanFactory ```BeanFactory factory = new XmlBeanFactory(new FileSystemResource("spring.xml"));```
     or Create object of ApplicationContext ```ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");``` 

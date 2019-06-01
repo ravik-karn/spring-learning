@@ -4,6 +4,6 @@
 
 <beans>
     <bean id="triangle" class="spring.Triangle">
-        <property name="type" value="RIGHT ANGLE"></property>
+        <constructor-arg value="Equilateral"/>
     </bean>
 </beans>

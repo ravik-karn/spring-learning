@@ -8,6 +8,12 @@ public class Triangle {
     }
 
     public void setType(String type) {
+        System.out.println("Using setter");
+        this.type = type;
+    }
+
+    public Triangle(String type) {
+        System.out.println("Using constructor");
         this.type = type;
     }
 
