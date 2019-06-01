@@ -37,6 +37,7 @@ mvn package
     * Type and order of bean parameters are automatically inferred
     * Type can be explicitly defined also using ```<constructor-arg type="int" value="10"/>```
     * Order of bean parameters an be explicitly defined also using ```<constructor-arg index="0" value="Equilateral"/>```
+    * Passing reference of another object as bean param ```<constructor-arg ref="pointA"/>```
     
 ```diff    
 - While using ApplicationContext bean XML file should be in the class path

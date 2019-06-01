@@ -4,7 +4,21 @@
 
 <beans>
     <bean id="triangle" class="spring.Triangle">
-        <constructor-arg index="0" value="Equilateral"/>
-        <constructor-arg type="int" value="10"/>
+        <property name="type" value="Equilateral"/>
+        <property name="pointA" ref="pointA"/>
+        <property name="pointB" ref="pointB"/>
+        <property name="pointC" ref="pointC"/>
+    </bean>
+    <bean id="pointA" class="spring.Point">
+        <constructor-arg index="0" value="0"/>
+        <constructor-arg index="1" value="0"/>
+    </bean>
+    <bean id="pointB" class="spring.Point">
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1" value="1"/>
+    </bean>
+    <bean id="pointC" class="spring.Point">
+        <constructor-arg index="0" value="2"/>
+        <constructor-arg index="1" value="2"/>
     </bean>
 </beans>

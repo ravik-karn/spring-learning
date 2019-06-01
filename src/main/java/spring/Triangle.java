@@ -2,18 +2,23 @@ package spring;
 
 public class Triangle {
     private String type;
-    private int height;
+    private Point pointA;
+    private Point pointB;
+    private Point pointC;
 
-    public Triangle() {}
+    public Triangle() {
+    }
 
     public Triangle(String type) {
         System.out.println("Using constructor");
         this.type = type;
     }
 
-    public Triangle(String type, int height) {
+    public Triangle(String type, Point pointA, Point pointB, Point pointC) {
         this.type = type;
-        this.height = height;
+        this.pointA = pointA;
+        this.pointB = pointB;
+        this.pointC = pointC;
     }
 
     public String getType() {
@@ -25,17 +30,33 @@ public class Triangle {
         this.type = type;
     }
 
-    public int getHeight() {
-        return height;
+    public Point getPointA() {
+        return pointA;
     }
 
-    public void setHeight(int height) {
-        this.height = height;
+    public void setPointA(Point pointA) {
+        this.pointA = pointA;
+    }
+
+    public Point getPointB() {
+        return pointB;
+    }
+
+    public void setPointB(Point pointB) {
+        this.pointB = pointB;
+    }
+
+    public Point getPointC() {
+        return pointC;
+    }
+
+    public void setPointC(Point pointC) {
+        this.pointC = pointC;
     }
 
     @Override
     public String toString() {
-        return this.type + " Triangle Height: " + this.height;
+        return this.type + " Triangle: " + this.pointA + this.pointB + this.pointC;
     }
 
     public void draw() {
