@@ -43,6 +43,10 @@ mvn package
 * AutoWire - byName, byType, constructor
 * Bean scope - singleton(default), prototype, request, session, global
 * Inheriting bean ```<bean id="triangle" class="spring.Triangle" parent="parent-triangle">```
+* Bean lifecycle [here](./resource/spring-bean-life-cycle.jpg)
+* Annotation is a spring defined post processor
+* @Autowired, @Controller, @Resource, @PostProcessor ....
+
     
 ```diff    
 - While using ApplicationContext bean XML file should be in the class path
