@@ -4,6 +4,7 @@
 
 <beans>
     <bean id="triangle" class="spring.Triangle">
-        <constructor-arg value="Equilateral"/>
+        <constructor-arg index="0" value="Equilateral"/>
+        <constructor-arg type="int" value="10"/>
     </bean>
 </beans>

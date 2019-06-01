@@ -34,9 +34,10 @@ mvn package
     * Create object of BeanFactory ```BeanFactory factory = new XmlBeanFactory(new FileSystemResource("spring.xml"));```
     or Create object of ApplicationContext ```ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");``` 
     * Call ```getBean``` with bean ID to create bean.
-
+    * Type and order of bean parameters are automatically inferred
+    * Type can be explicitly defined also using ```<constructor-arg type="int" value="10"/>```
+    * Order of bean parameters an be explicitly defined also using ```<constructor-arg index="0" value="Equilateral"/>```
+    
 ```diff    
 - While using ApplicationContext bean XML file should be in the class path
 ```
-    
-     

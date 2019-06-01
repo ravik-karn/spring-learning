@@ -2,6 +2,19 @@ package spring;
 
 public class Triangle {
     private String type;
+    private int height;
+
+    public Triangle() {}
+
+    public Triangle(String type) {
+        System.out.println("Using constructor");
+        this.type = type;
+    }
+
+    public Triangle(String type, int height) {
+        this.type = type;
+        this.height = height;
+    }
 
     public String getType() {
         return type;
@@ -12,19 +25,20 @@ public class Triangle {
         this.type = type;
     }
 
-    public Triangle(String type) {
-        System.out.println("Using constructor");
-        this.type = type;
+    public int getHeight() {
+        return height;
     }
 
-    public Triangle() {}
+    public void setHeight(int height) {
+        this.height = height;
+    }
 
     @Override
     public String toString() {
-        return this.type + " Triangle";
+        return this.type + " Triangle Height: " + this.height;
     }
 
     public void draw() {
-        System.out.println("Draw triangle " + this.type);
+        System.out.println("Draw triangle " + this);
     }
 }
