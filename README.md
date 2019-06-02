@@ -8,7 +8,6 @@ mvn package
 ## Table of content
 * Spring architecture
 * Spring Bean
-* Spring Core
 * Spring AOP
 
 ## Spring Architecture
@@ -52,3 +51,21 @@ mvn package
 - While using ApplicationContext bean XML file should be in the class path
 - While using settee for adding property to a bean we must define a default constructor
 ```
+
+## Aspect oriented programming(AOP)
+* Handles cross cutting concern
+* Follows inversion of control [diagram](./resource/spring-aop.png)
+* @Before(execution(func()))
+* Aspect implementation - XML based, AspectJ based
+* Terminologies
+    * Aspect
+    * Join point 
+    * Advice - Before, After, After-returning, After-throwing, aroung
+    * Pointcut
+    * Introduction
+    * Target Object
+    * Weaving
+
+```diff
+- TODO: Add example code for aspect
+``` 
