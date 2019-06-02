@@ -18,7 +18,6 @@
         <constructor-arg index="1" value="2"/>
     </bean>
     <alias name="pointA" alias="zero-point"/>
-    <bean id="customBeanPostProcessor" class="spring.BeanPostProcess"/>
     <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
         <property name="basenames">

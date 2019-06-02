@@ -46,7 +46,7 @@ mvn package
 * Bean lifecycle [here](./resource/spring-bean-life-cycle.jpg)
 * Annotation is a spring defined post processor
 * @Autowired, @Controller, @Resource, @PostProcessor ....
-
+* Event handling - ApplicationListener, ApplicationEventPublisher, ApplicationEventPublisherAware
     
 ```diff    
 - While using ApplicationContext bean XML file should be in the class path
