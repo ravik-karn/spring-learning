@@ -1,9 +1,20 @@
 package spring;
 
+import org.springframework.context.MessageSource;
+
 public class Triangle {
     private Point pointA;
     private Point pointB;
     private Point pointC;
+    private MessageSource messageSource;
+
+    public MessageSource getMessageSource() {
+        return messageSource;
+    }
+
+    public void setMessageSource(MessageSource messageSource) {
+        this.messageSource = messageSource;
+    }
 
     public Triangle() {
     }
@@ -33,5 +44,6 @@ public class Triangle {
 
     public void draw() {
         System.out.println("Draw triangle " + this);
+        System.out.println(messageSource.getMessage("drawn", new Object[]{pointA, pointB, pointC}, "drawing", null));
     }
 }
