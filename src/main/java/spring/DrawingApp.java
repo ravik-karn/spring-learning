@@ -9,6 +9,5 @@ public class DrawingApp {
         context.registerShutdownHook();
         Triangle triangle = (Triangle) context.getBean("triangle");
         triangle.draw();
-        System.gc();
     }
 }
